@@ -151,7 +151,7 @@ class Connection(object):
                     self._refresh_thrift_client()
                     self.open()
                 except  TTransportException as ex:
-                    falis+=1
+                    fails+=1
         finally:
             if fails==0 or fails<len(failover):
                logger.debug("Connection sucessful")
